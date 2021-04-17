@@ -143,6 +143,11 @@ p {
 	margin: 0;
 }
 
+ul {
+	color: #2a2a2a;
+	line-height: 1.5;
+}
+
 /*footer*/
 	footer {
 		background-color: black;
@@ -215,7 +220,11 @@ a.hamburger {
 
 /* Responsive*/
 @media screen and (max-width: 768px) {
-    .column {
+	main {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+	.column {
         width: 100%;
         display: block;
         margin-bottom: 20px;
@@ -268,5 +277,8 @@ a.hamburger {
 	}
 	footer#normal {
 	display: none;
+	}
+	ul li {
+		text-align: left;
 	}
 }
