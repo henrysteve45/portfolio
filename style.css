@@ -191,14 +191,6 @@ ul {
 		display: table;
 		clear: both;
 	}
-	.card {
-		padding: 16px;
-		text-align: left;
-	}
-
-	.card p {
-		font-size: 18px;
-	}
 
 	.cardImg {
 		display: block;
