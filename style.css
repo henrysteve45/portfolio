@@ -180,7 +180,7 @@ ul {
 		width: 128px;
 	}
 	td.desc {
-		border-bottom: 1px solid #e0e0e0;
+		border-bottom: 1px dotted #c7c7c7;;
 		padding: 16px 0 16px 0;
 	}
 
@@ -247,18 +247,26 @@ ul {
 		padding: 8px 16px;
 		text-decoration: none;
 		font-size: 18px;
+		box-shadow: 8px 8px 0px #e0e0e0;
 	}
 
 	.button:hover {
 		background-color: #b54052;
 	}
 a.link{
-	color: var(--primary);
+	color: slateblue;
 	text-decoration: none;
 	border-bottom: 2px dotted;
 }
+
+a.link:hover {
+	color: var(--primary);
+}
 /* Responsive*/
 @media screen and (max-width: 768px) {
+	.button {
+		font-size: 16px;
+	}
 	td img {
 		width: 64px;
 	}
