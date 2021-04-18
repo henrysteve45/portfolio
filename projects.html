@@ -10,63 +10,93 @@
 <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Open+Sans&display=swap" rel="stylesheet">
         <script src="script.js"></script>
         <title>Steve Henry's Web Portfolio</title>
+		<style>
+			#table {
+				width: 92%;
+				margin: auto;
+				background-color: white;
+				padding: 16px 32px;
+				border-left: 1px solid #c7c7c7;
+				border-right: 1px solid #c7c7c7;
+			}
+			main {
+				background-color: #e0e0e0;
+			}
+			@media screen and (max-width: 768px) {
+				#table {
+					background-color: white;
+					width: 100%;
+					padding: 8px;
+					border: none;
+				}
+				main {
+					background-color: white;
+				}
+			}
+		</style>
     </head>
     <body>
         <div id="wrapper">
             <nav class="topnav" id="myTopnav">
                 <a href="javascript:void(0);" class="hamburger" id="hamburger" onclick="hamToggle()"><i class="fa fa-bars"></i></a>
                 <a class="nav" href="index.html"><i class="fa fa-home"></i>&nbsp;&nbsp;About Me</a>
-                <a class="nav" id="active" href="projects.html"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Projects</a>
                 <a class="nav" href="resume.html"><i class="fa fa-file-text"></i>&nbsp;&nbsp;Resume</a>
+				<a class="nav" id="active" href="projects.html"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Projects</a>
+				<a class="nav" href="organizations.html"><i class="fa fa-building"></i>&nbsp;&nbsp;Organizations</a>
                 <a class="nav" href="contact.html"><i class="fa fa-envelope"></i>&nbsp;&nbsp;Contact</a>
-                <form id="search">
-                    <input type="text" id="inputSearch" name="search" placeholder="Search..." pattern="[A-Za-z0-9]{2,7}"><button type="button" onclick="cookiePls();" class="search"><i class="fa fa-search"></i></button>
-                </form>
             </nav>
             <div id="hero">
-                <h1>Projects</h1>
+                <h1>Resume</h1>
             </div>
             <main>
-                <h2>Web development projects</h2>
-                <div class="row">
-                    <div class="column">
-                        <div class="card">
-                            <img src="img/liteeta.png" width="48">
-                            <h3>LiteETA</h3>
-                            <p>A web application that allows DC residents to see what time the next bus will come at their specified stop and other bus information.</p>
-                            <button type="button" onclick="window.location.href='http://35.mutechchallenge.com';"><i class="fa fa-external-link" aria-hidden="true"></i>&nbsp;&nbsp;Visit Website</button>
-                            <button type="button" onclick="window.location.href='https://github.com/henrysteve45/liteETA';"><i class="fa fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Source code</button>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <img src="img/fingerprint.png" width="48">
-                            <h3>Browser Fingerprinting</h3>
-                            <p>This web application demonstrates what information browsers and websites can get about users via device fingerprinting.</p>
-                            <button type="button" onclick="window.location.href='https://github.com/henrysteve45/webVulnerabilities';"><i class="fa fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Source code</button>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <img src="img/carboncalc.png" width="48">
-                            <h3>Carbon Calc</h3>
-                            <p>A carbon footprint calculator which educates users on how their daily habits impact their environment.</p>
-                            <button type="button" onclick="window.location.href='https://github.com/henrysteve45/CarbonCalc/';"><i class="fa fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Source code</button>
-                        </div>
-                    </div>
-                </div>
-                <h2>Cybersecurity projects</h2>
+				<section id="table">
+					<h2>Personal Projects</h2>
+					<table>
+						<tr>
+							<td class="icon"><img src=img/liteeta.png></td>
+							<td class="desc">
+								<h4>LiteETA</h4>
+								<p>A real-time bus arrivial web application that shows Washington, DC residents when the next bus will come at their desired stop, along with other data such as route data and schedules. Users can enter any WMATA Metrobus route or bus stop ID to get live information. I built this to improve upon shortcomings my family and I have with WMATA’s official bus application. The site utilizes the WMATA API, Leaflet.js and Mapbox.</p> 
+								<br>
+								<a class="link" href="http://35.mutechchallenge.com/"><i class="fa fa-external-link"></i>&nbsp;Visit site</a><br>
+								<a class="link" href="http://35.mutechchallenge.com/"><i class="fa fa-github-square"></i>&nbsp;Source code</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="icon"><img src=img/fingerprint.png></td>
+							<td class="desc">
+								<h4>Browser Fingerprinting</h4>
+								<p>A web application that demonstrates the ways browsers can generate a fingerprint of users based on browser settings, JavaScript properties, device hardware, and more. The site also provides explanations on how these methods work to a general audience and mitigation techniques. Bootstrap was used for visual styling and responsive design.</p>
+								<br>
+								<a class="link" href="https://github.com/henrysteve45/webVulnerabilities"><i class="fa fa-github-square"></i>&nbsp;Source code</a>
+							</td>
+						</tr>
+					</table>
+					
+					<h2>Internship Projects</h2>
+					<table>
+						<tr>
+							<td class="icon"><img src=img/sprwt.png></td>
+							<td class="desc">
+								<h4>Sprwt</h4>
+								<small>Cybersecurity Intern<br>January 2021 - April 2021<br>New York, NY</small>
+								<p>Conducted vulnerability assessments on the Sprwt website, managed web security protocols, and created business documents for Sprwt clients.</p>
+								<p>Lead an initiative to protect Sprwt's website from threat actors by identifying vulnerabilities/compliance errors and providing suggestions on how to solve security issues.</p>
+							</td>
+						</tr>
+					</table>
+				</section>
             </main>
             <footer class="footer" id="normal">
-            &copy; 2021 - Steve Henry<span style="float: right;"><a href="mailto:henry.steve45@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;henry.steve45@gmail.com</a>
-            | <a href="https://www.linkedin.com/in/steve-henry-384818146/"><i class="fa fa-linkedin-square" aria-hidden="true"></i>&nbsp;LinkedIn</a>
-            | <a href="https://github.com/henrysteve45/"><i class="fa fa-github-square" aria-hidden="true"></i>&nbsp;Github</a></span>
+				&copy; 2021 - Steve Henry<span style="float: right;"><a href="mailto:henry.steve45@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;henry.steve45@gmail.com</a>
+				| <a href="https://www.linkedin.com/in/steve-henry-384818146/"><i class="fa fa-linkedin-square" aria-hidden="true"></i>&nbsp;LinkedIn</a>
+				| <a href="https://github.com/henrysteve45/"><i class="fa fa-github-square" aria-hidden="true"></i>&nbsp;Github</a></span>
         	</footer>
 			<footer class="footer" id="responsive" style="text-align: center;">
-            &copy; 2021 - Steve Henry<a href="mailto:henry.steve45@gmail.com">
-			<br><br> <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;henry.steve45@gmail.com</a>
-            <br> <a href="https://www.linkedin.com/in/steve-henry-384818146/"><i class="fa fa-linkedin-square" aria-hidden="true"></i>&nbsp;LinkedIn</a>
-            <br> <a href="https://github.com/henrysteve45/"><i class="fa fa-github-square" aria-hidden="true"></i>&nbsp;Github</a>
+				&copy; 2021 - Steve Henry<a href="mailto:henry.steve45@gmail.com">
+				<br><br> <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;henry.steve45@gmail.com</a>
+				<br> <a href="https://www.linkedin.com/in/steve-henry-384818146/"><i class="fa fa-linkedin-square" aria-hidden="true"></i>&nbsp;LinkedIn</a>
+				<br> <a href="https://github.com/henrysteve45/"><i class="fa fa-github-square" aria-hidden="true"></i>&nbsp;Github</a>
         	</footer>
         </div>
     </body>
