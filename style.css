@@ -150,6 +150,22 @@ ul {
 	line-height: 1.5;
 }
 
+figure {
+	margin: 0px;
+	width: 512px;
+}
+
+figcaption {
+	color: gray;
+	line-height: 1.5;
+	margin-top: 16px;
+	width: 480;
+	padding: 8px;
+	border-left: 4px solid var(--secondary);
+	background-color: #f0f0f0;
+	font-size: 12px;
+}
+
 /*footer*/
 	footer {
 		background-color: black;
@@ -176,13 +192,15 @@ ul {
 /*table*/
 	td.icon {
 		width: 128px;
+		vertical-align:top;
+		padding-top: 16px;
 	}
 	td.desc {
-		border-bottom: 1px dotted #c7c7c7;;
+		border-bottom: 1px dotted #c7c7c7;
 		padding: 16px 0 16px 0;
 	}
 
-	td small, figcaption {
+	td small {
 		color: #919191;
 		line-height: 1.5;
 	}
@@ -251,6 +269,7 @@ td img.projectImg {
 		text-decoration: none;
 		font-size: 18px;
 		box-shadow: 8px 8px 0px #e0e0e0;
+		border: none;
 	}
 
 	.button:hover {
@@ -266,7 +285,11 @@ a.link:hover {
 	color: var(--primary);
 }
 /* Responsive*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
+	td img.projectImg, figcaption, figure {
+		width: 90%;
+	}
+	
 	.button {
 		font-size: 16px;
 	}

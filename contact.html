@@ -35,7 +35,7 @@
 				}
 			}
 			/*Field*/
-			input, select, textarea {
+			input [type=text] {
 				width: 25%;
 				padding: 12px;
 				border: 1px solid #ccc;
@@ -78,11 +78,67 @@
 					<h1>Let's stay in touch...</h1>
 					<p>Use this form to shoot me an email</p>
 					<form>
-						<input type="text" id="fname" name="firstname" placeholder="First name">
-						<input type="text" id="lname" name="lastname" placeholder="Last name">
-						<input type="text" id="email" name="email" placeholder="Email name">
-						<input type="tel" id="tel" name="tel" placeholder="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-					</form>
+                    <fieldset>
+                        <legend>Contact Form for Steve Henry</legend>
+                        
+                        <label for="fname">First name</label><br>
+                        <input type="text" id="fname" name="fname"><br><br>
+                        
+                        <label for="mname">Middle name</label><br>
+                        <small>Skip if not available</small><br>
+                        <input type="text" id="mname" name="mname">
+                        <br><br>
+                        
+                        <label for="lname">Last name</label><br>
+                        <input type="text" id="lname" name="lname">
+                        <br><br>
+                        
+                        <label for="phone">Phone</label><br>
+                        <small>Please use 123-456-6789 format</small><br>
+                        <input type="tel" id="phone" name="phone" placeholder="123-456-6789" pattern="[0-9]{3} [0-9]{3}-[0-9]{4}" required="">
+                        <br><br>
+                        
+                        <label>Rating</label><br>
+                        <input type="radio" id="0" name="rating" value="0">
+                        <label for="0">0</label>
+                        <input type="radio" id="1" name="rating" value="1">
+                        <label for="0">1</label>
+                        <input type="radio" id="2" name="rating" value="2">
+                        <label for="0">2</label>
+                        <input type="radio" id="3" name="rating" value="3">
+                        <label for="0">3</label>
+                        <input type="radio" id="4" name="rating" value="4">
+                        <label for="0">4</label>
+                        <input type="radio" id="5" name="rating" value="5">
+                        <label for="0">5</label><br><br>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span><br><br>
+                        
+                        <label>Which operating systems do you regularly use?</label><br>
+                        <input type="checkbox" id="win" name="os" value="Windows">
+                        <label for="win">Windows</label><br>
+                        <input type="checkbox" id="mac" name="os" value="Mac">
+                        <label for="mac">Mac</label><br>
+                        <input type="checkbox" id="lin" name="os" value="Linux">
+                        <label for="lin">Linux</label>
+                        <br><br>
+                        
+                        <label>E-mail address<br>
+                        <input type="text" name="email" id="email"></label><br><br>
+                        
+                        <label for="comments">Comments</label><br>
+                        <textarea name="comments" id="comments" rows="4" cols="40"></textarea><br><br>
+                        
+                        <label for="bday">Date</label><br>
+                        <input type="date" id="bday" name="bday">
+						
+						<br>
+						<button style="margin: 16px 0px" class="button" type="button">Submit</button>
+                    </fieldset>
+                </form>
 				</section>
             </main>
             <footer class="footer" id="normal">
