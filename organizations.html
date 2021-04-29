@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Open+Sans&display=swap" rel="stylesheet">
         <script src="script.js"></script>
         <title>Steve Henry's Web Portfolio</title>
+		<link rel="icon" type="image/png" href="steve.jpg">
 		<style>
 			#table {
 				width: 92%;
@@ -33,6 +34,78 @@
 					background-color: white;
 				}
 			}
+			/* Slideshow container */
+			.mySlides {
+				display:none
+			}
+
+			.slideshow-container {
+				height: 500px;
+				position: relative;
+				margin: auto;
+				overflow: hidden;
+			}
+
+			.controls {
+				background-color: white;
+				padding: 16px;
+				cursor: default;
+			}
+			/* Next & previous buttons */
+			.changeSlide {
+				height: 32px;
+				width: 32px;
+				border-radius: 50%;
+				border: none;
+				transition: 0.1s;
+				background-color: #319aff;
+				color: white;
+				font-weight: bold;
+			}
+
+			.changeSlide:hover {
+				background-color: #75bbff;
+			}
+
+			.changeSlide:active {
+				background-color: #253faf;
+			}
+
+			/* Caption text */
+			.text {
+				color: #f2f2f2;
+				font-size: 15px;
+				padding: 8px 12px;
+				position: absolute;
+				bottom: 0px;
+				width: 100%;
+				text-align: center;
+				background-image: linear-gradient(rgba(0, 0, 0, 0), black);
+				text-shadow: 0px 0px 5px black;
+			}
+
+			/* The dots/bullets/indicators */
+			.dot {
+				cursor: default;
+				height: 16px;
+				width: 16px;
+				display: inline-block;
+				transition: color 0.1s ease;
+				color: #e0e0e0;
+			}
+
+			.active {
+				color: #319aff;
+			}
+
+			.dot:hover {
+				color: #75bbff;
+			}
+
+			/* On smaller screens, decrease text size */
+			@media only screen and (max-width: 300px) {
+			  .prev, .next,.text {font-size: 11px}
+			}
 		</style>
     </head>
     <body>
@@ -46,10 +119,33 @@
                 <a class="nav" href="contact.html"><i class="fa fa-envelope"></i>&nbsp;&nbsp;Contact</a>
             </nav>
             <div id="hero">
-                <h1>Projects</h1>
+                <h1>Organizations</h1>
             </div>
             <main>
 				<section id="table">
+					<div class="slideshow-container">
+						<div class="mySlides fade">
+							<img src="img/gallery/1.png" style="width:100%" alt="Me and my fellow Urban Alliance interns at the Economic Club">
+							<div class="text">Me and my fellow Urban Alliance interns at the Economic Club</div>
+						</div>
+
+						<div class="mySlides fade">
+							<img src="img/gallery/2.png" style="width:100%" alt="Me and my fellow Accenture interns">
+							<div class="text">Me and my fellow Accenture interns</div>
+						</div>
+
+						<div class="mySlides fade">
+							<img src="img/gallery/3.png" style="width:100%">
+							<div class="text">Washington, DC Again</div>
+						</div>
+					</div>
+					<div class="controls" style="text-align:center">
+						<button type="button" class="changeSlide" onclick="plusSlides(-1)">&#10094;</button>
+						<a onclick="currentSlide(1)" class="dot"><i class="fa fa-circle" aria-hidden="true"></i></a> 
+						<a onclick="currentSlide(2)" class="dot"><i class="fa fa-circle" aria-hidden="true"></i></a> 
+						<a onclick="currentSlide(3)" class="dot"><i class="fa fa-circle" aria-hidden="true"></i></a>  
+						<button type="button" class="changeSlide" onclick="plusSlides(1)">&#10095;</button>
+					</div>
 					<table>
 						<tr>
 							<td class="icon"><img src=img/economicclub.jpg></td>
@@ -107,4 +203,42 @@
         	</footer>
         </div>
     </body>
+	<script>
+		function hideWindow() {
+			document.getElementById("wrapper").style.opacity = 0;
+		}
+		function showWindow() {
+			document.getElementById("wrapper").style.opacity = 1;
+		}
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			if (n > slides.length) {
+				slideIndex = 1;
+			}    
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+			for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+		}
+		</script>
 </html>

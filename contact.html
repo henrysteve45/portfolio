@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Arvo&family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
+        <title>Steve Henry's Web Portfolio</title>
+		<link rel="icon" type="image/png" href="steve.jpg">
+		<style>
+			#table {
+				width: 92%;
+				margin: auto;
+				background-color: white;
+				padding: 16px 32px;
+				border-left: 1px solid #c7c7c7;
+				border-right: 1px solid #c7c7c7;
+			}
+			main {
+				background-color: #e0e0e0;
+			}
+			@media screen and (max-width: 768px) {
+				#table {
+					background-color: white;
+					width: 100%;
+					padding: 8px;
+					border: none;
+				}
+				main {
+					background-color: white;
+				}
+			}
+			/*Field*/
+			input, select, textarea {
+				width: 25%;
+				padding: 12px;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				box-sizing: border-box;
+				margin-top: 6px;
+				margin-bottom: 16px;
+				resize: vertical;
+			}
+
+			input[type=submit] {
+				background-color: #4CAF50;
+				color: white;
+				padding: 12px 20px;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+			}
+
+			input[type=submit]:hover {
+				background-color: #45a049;
+			}
+		</style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <nav class="topnav" id="myTopnav">
+                <a href="javascript:void(0);" class="hamburger" id="hamburger" onclick="hamToggle()"><i class="fa fa-bars"></i></a>
+                <a class="nav" href="index.html"><i class="fa fa-home"></i>&nbsp;&nbsp;About Me</a>
+                <a class="nav" href="resume.html"><i class="fa fa-file-text"></i>&nbsp;&nbsp;Resume</a>
+				<a class="nav" href="projects.html"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Projects</a>
+				<a class="nav" href="organizations.html"><i class="fa fa-building"></i>&nbsp;&nbsp;Organizations</a>
+                <a class="nav" id="active" href="contact.html"><i class="fa fa-envelope"></i>&nbsp;&nbsp;Contact</a>
+            </nav>
+            <div id="hero">
+                <h1>Contact</h1>
+            </div>
+            <main>
+				<section id="table">
+					<h1>Let's stay in touch...</h1>
+					<p>Use this form to shoot me an email</p>
+					<form>
+						<input type="text" id="fname" name="firstname" placeholder="First name">
+						<input type="text" id="lname" name="lastname" placeholder="Last name">
+						<input type="text" id="email" name="email" placeholder="Email name">
+						<input type="tel" id="tel" name="tel" placeholder="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+					</form>
+				</section>
+            </main>
+            <footer class="footer" id="normal">
+				&copy; 2021 - Steve Henry<span style="float: right;"><a href="mailto:henry.steve45@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;henry.steve45@gmail.com</a>
+				| <a href="https://www.linkedin.com/in/steve-henry-384818146/"><i class="fa fa-linkedin-square" aria-hidden="true"></i>&nbsp;LinkedIn</a>
+				| <a href="https://github.com/henrysteve45/"><i class="fa fa-github-square" aria-hidden="true"></i>&nbsp;Github</a></span>
+        	</footer>
+			<footer class="footer" id="responsive" style="text-align: center;">
+				&copy; 2021 - Steve Henry<a href="mailto:henry.steve45@gmail.com">
+				<br><br> <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;henry.steve45@gmail.com</a>
+				<br> <a href="https://www.linkedin.com/in/steve-henry-384818146/"><i class="fa fa-linkedin-square" aria-hidden="true"></i>&nbsp;LinkedIn</a>
+				<br> <a href="https://github.com/henrysteve45/"><i class="fa fa-github-square" aria-hidden="true"></i>&nbsp;Github</a>
+        	</footer>
+        </div>
+    </body>
+</html>
