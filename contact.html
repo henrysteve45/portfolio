@@ -35,28 +35,8 @@
 				}
 			}
 			/*Field*/
-			input [type=text] {
-				width: 25%;
-				padding: 12px;
-				border: 1px solid #ccc;
-				border-radius: 4px;
-				box-sizing: border-box;
-				margin-top: 6px;
-				margin-bottom: 16px;
-				resize: vertical;
-			}
-
-			input[type=submit] {
-				background-color: #4CAF50;
-				color: white;
-				padding: 12px 20px;
-				border: none;
-				border-radius: 4px;
-				cursor: pointer;
-			}
-
-			input[type=submit]:hover {
-				background-color: #45a049;
+			input {
+				width: 100%;
 			}
 		</style>
     </head>
@@ -77,68 +57,40 @@
 				<section id="table">
 					<h1>Let's stay in touch...</h1>
 					<p>Use this form to shoot me an email</p>
-					<form>
-                    <fieldset>
-                        <legend>Contact Form for Steve Henry</legend>
-                        
-                        <label for="fname">First name</label><br>
-                        <input type="text" id="fname" name="fname"><br><br>
-                        
-                        <label for="mname">Middle name</label><br>
-                        <small>Skip if not available</small><br>
-                        <input type="text" id="mname" name="mname">
-                        <br><br>
-                        
-                        <label for="lname">Last name</label><br>
-                        <input type="text" id="lname" name="lname">
-                        <br><br>
-                        
-                        <label for="phone">Phone</label><br>
-                        <small>Please use 123-456-6789 format</small><br>
-                        <input type="tel" id="phone" name="phone" placeholder="123-456-6789" pattern="[0-9]{3} [0-9]{3}-[0-9]{4}" required="">
-                        <br><br>
-                        
-                        <label>Rating</label><br>
-                        <input type="radio" id="0" name="rating" value="0">
-                        <label for="0">0</label>
-                        <input type="radio" id="1" name="rating" value="1">
-                        <label for="0">1</label>
-                        <input type="radio" id="2" name="rating" value="2">
-                        <label for="0">2</label>
-                        <input type="radio" id="3" name="rating" value="3">
-                        <label for="0">3</label>
-                        <input type="radio" id="4" name="rating" value="4">
-                        <label for="0">4</label>
-                        <input type="radio" id="5" name="rating" value="5">
-                        <label for="0">5</label><br><br>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span><br><br>
-                        
-                        <label>Which operating systems do you regularly use?</label><br>
-                        <input type="checkbox" id="win" name="os" value="Windows">
-                        <label for="win">Windows</label><br>
-                        <input type="checkbox" id="mac" name="os" value="Mac">
-                        <label for="mac">Mac</label><br>
-                        <input type="checkbox" id="lin" name="os" value="Linux">
-                        <label for="lin">Linux</label>
-                        <br><br>
-                        
-                        <label>E-mail address<br>
-                        <input type="text" name="email" id="email"></label><br><br>
-                        
-                        <label for="comments">Comments</label><br>
-                        <textarea name="comments" id="comments" rows="4" cols="40"></textarea><br><br>
-                        
-                        <label for="bday">Date</label><br>
-                        <input type="date" id="bday" name="bday">
-						
-						<br>
-						<button style="margin: 16px 0px" class="button" type="button">Submit</button>
-                    </fieldset>
-                </form>
+					<div>
+						<div class="row">
+							<div class="column">
+								<form>
+									<label for="fullname">Full Name</label>
+									<input name="fullname" type="text">
+									<br>
+									<label for="email">Email</label>
+									<input name="email" type="text">
+									<label for="phone">Phone</label>
+									<input type="tel" name="phone" placeholder="123-456-6789" pattern="[0-9]{3} [0-9]{3}-[0-9]{4}" required="">
+									<label for="occupation">Occupation</label>
+									<select id="occupation" name="occupation">
+										<option value="student">Student</option>
+										<option value="educator">Educator</option>
+										<option value="usa">Working</option>
+										<option value="other">Other</option>
+									</select>
+									<br>
+									<label for="message">Message</label>
+									<textarea id="message" name="message" placeholder="Compose message..." style="height:200px"></textarea>
+									<br>
+									<button style="margin: 16px 0px" class="button" type="button">Submit</button>
+								</form>
+							</div>
+							<div class="column">
+								<div class="cardText">
+									<i class="fa fa-lock" aria-hidden="true" style="font-size: 48px; color: var(--secondary)"></i>
+									<h3>Cybersecurity</h3>
+									<p>I understand that securing digital information is critical to the operation of any organization, as we live in a time where many business and government functions are powered through cloud technology. Organizations must endure a never-ending battle of threat actors trying to penetrate their networks, while also defending against them with secure technology and best practices. My background and passion in cybersecurity will help ensure companies are resilient to these attacks.</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</section>
             </main>
             <footer class="footer" id="normal">

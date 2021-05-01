@@ -56,47 +56,12 @@ nav a:hover:not(#active) {
     color: var(--primary);
     transition: 0.1s ease-in-out;
 }
-/*search*/
-input[type=text] {
-    width: 20%;
-    box-sizing: border-box;
-    border: 2px solid #d8d8d8;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-    font-size: 16px;
-    background-color: #d8d8d8;
-    margin: 6px;
-    padding: 6px;
-}
-input[type=text]:focus {
-    background-color: white;
-    border: 2px solid #e23e57;
-}
-input[type=text]:invalid {
-    background-color: salmon;
-}
-
-button.search {
-    box-sizing: border-box;
-    border: none;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    padding: 8px 16px;
-    color: white;
-    font-size: 16px;
-    background-color: #d8d8d8;
-    color: gray;
-    margin-left: -4px;
-}
-button.search:hover {
-    background-color: var(--primary);
-    color: white;
-}
 /*hero*/
 	#hero {
 		background-size: cover;
 		padding: 32px 20% 32px 20%;
 		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("bg.jpg");
+		background-attachment: fixed;
 	}
 	#hero h1 {
 		color: white;
