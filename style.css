@@ -118,7 +118,7 @@ figcaption {
 	color: gray;
 	line-height: 1.5;
 	margin-top: 16px;
-	width: 480;
+	width: 480px;
 	padding: 8px;
 	border-left: 4px solid var(--secondary);
 	background-color: #f0f0f0;
