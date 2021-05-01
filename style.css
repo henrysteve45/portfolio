@@ -235,6 +235,7 @@ td img.projectImg {
 		font-size: 18px;
 		box-shadow: 8px 8px 0px #e0e0e0;
 		border: none;
+		transition: background-color .1s;
 	}
 
 	.button:hover {

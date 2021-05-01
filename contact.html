@@ -12,27 +12,18 @@
         <title>Steve Henry's Web Portfolio</title>
 		<link rel="icon" type="image/png" href="steve.jpg">
 		<style>
-			#table {
-				width: 92%;
-				margin: auto;
-				background-color: white;
-				padding: 16px 32px;
-				border-left: 1px solid #c7c7c7;
-				border-right: 1px solid #c7c7c7;
+			.socialIcon {
+				padding: 24px;
+				font-size: 32px;
+				text-align: center;
+				text-decoration: none;
+				color: white;
+				box-shadow: 8px 8px 0px #e0e0e0;
+				margin: 0 8px;
+				transition: transform .2s;
 			}
-			main {
-				background-color: #e0e0e0;
-			}
-			@media screen and (max-width: 768px) {
-				#table {
-					background-color: white;
-					width: 100%;
-					padding: 8px;
-					border: none;
-				}
-				main {
-					background-color: white;
-				}
+			.socialIcon:hover {
+				transform: scale(1.05);
 			}
 			/*Field*/
 			input {
@@ -54,44 +45,46 @@
                 <h1>Contact</h1>
             </div>
             <main>
-				<section id="table">
-					<h1>Let's stay in touch...</h1>
-					<p>Use this form to shoot me an email</p>
-					<div>
-						<div class="row">
-							<div class="column">
-								<form>
-									<label for="fullname">Full Name</label>
-									<input name="fullname" type="text">
-									<br>
-									<label for="email">Email</label>
-									<input name="email" type="text">
-									<label for="phone">Phone</label>
-									<input type="tel" name="phone" placeholder="123-456-6789" pattern="[0-9]{3} [0-9]{3}-[0-9]{4}" required="">
-									<label for="occupation">Occupation</label>
-									<select id="occupation" name="occupation">
-										<option value="student">Student</option>
-										<option value="educator">Educator</option>
-										<option value="usa">Working</option>
-										<option value="other">Other</option>
-									</select>
-									<br>
-									<label for="message">Message</label>
-									<textarea id="message" name="message" placeholder="Compose message..." style="height:200px"></textarea>
-									<br>
-									<button style="margin: 16px 0px" class="button" type="button">Submit</button>
-								</form>
-							</div>
-							<div class="column">
-								<div class="cardText">
-									<i class="fa fa-lock" aria-hidden="true" style="font-size: 48px; color: var(--secondary)"></i>
-									<h3>Cybersecurity</h3>
-									<p>I understand that securing digital information is critical to the operation of any organization, as we live in a time where many business and government functions are powered through cloud technology. Organizations must endure a never-ending battle of threat actors trying to penetrate their networks, while also defending against them with secure technology and best practices. My background and passion in cybersecurity will help ensure companies are resilient to these attacks.</p>
-								</div>
-							</div>
+				<div class="row" style="border: none; box-shadow: none; margin: 0;">
+					<div class="column">
+						<div class="cardText" style="text-align: center;padding: 16px;">
+							<h3>Let's stay in touch...</h3>
+							<p>Use this form to send me an email. Or, you can check out my professional profiles below.</p>
+							<br>
+							<a href="https://www.linkedin.com/in/steve-henry-384818146/" class="fa fa-linkedin socialIcon" style="background-color: #007bb5;"></a>
+							<a href="https://github.com/henrysteve45/" class="fa fa-github socialIcon" style="background-color: #032f62;"></a>
+							<br><br>
+							<ul style="list-style-type: none; padding-left: 0px;">
+								<li><i class="fa fa-envelope" aria-hidden="true"></i> henry.steve45@gmail.com</li>
+								<li><i class="fa fa-phone" aria-hidden="true"></i> 202-555-5555</li>
+								<li><i class="fa fa-map-marker" aria-hidden="true"></i> Washington, DC</li>
+							</ul>
 						</div>
 					</div>
-				</section>
+					<div class="column">
+						<form style="border: 4px solid black; padding: 16px; box-shadow: 16px 16px 0px #e0e0e0;">
+							<label for="fullname">Full Name</label>
+							<input name="fullname" type="text">
+							<br>
+							<label for="email">Email</label>
+							<input name="email" type="text">
+							<label for="phone">Phone</label>
+							<input type="tel" name="phone" placeholder="123-456-6789" pattern="[0-9]{3} [0-9]{3}-[0-9]{4}" required="">
+							<label for="occupation">Occupation</label>
+							<select id="occupation" name="occupation">
+								<option value="student">Student</option>
+								<option value="educator">Educator</option>
+								<option value="usa">Working</option>
+								<option value="other">Other</option>
+							</select>
+							<br>
+							<label for="message">Message</label>
+							<textarea id="message" name="message" placeholder="Compose message..." style="height:200px"></textarea>
+							<br>
+							<button style="margin: 16px 0px" class="button" type="button">Submit</button>
+						</form>
+					</div>
+				</div>
             </main>
             <footer class="footer" id="normal">
 				&copy; 2021 - Steve Henry<span style="float: right;"><a href="mailto:henry.steve45@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;henry.steve45@gmail.com</a>
