@@ -12,22 +12,47 @@
         <title>Steve Henry's Web Portfolio</title>
 		<link rel="icon" type="image/png" href="steve.jpg">
 		<style>
+			#hero {
+				background-color: white;
+				padding: 32px 20% 32px 20%;
+				color: black;
+				box-shadow: inset 0 7px 5px -7px gray;
+			}
+			#hero h1 {
+				color: black;
+				text-align: center;
+				text-shadow: none;
+			}
+			body {
+				background-color: slateblue;
+			}
 			.socialIcon {
 				padding: 24px;
 				font-size: 32px;
 				text-align: center;
 				text-decoration: none;
 				color: white;
-				box-shadow: 8px 8px 0px #e0e0e0;
+				box-shadow: 8px 8px 0px #5242a8;
 				margin: 0 8px;
 				transition: transform .2s;
+				background-color: black;
+				color: white;
 			}
 			.socialIcon:hover {
 				transform: scale(1.05);
 			}
 			/*Field*/
-			input {
-				width: 100%;
+			input, textarea, select {
+				width: 90%;
+				border: none;
+				border: 1px solid #e0e0e0;
+				background-color: white;
+				font-size: 16px;
+				padding: 8px;
+				margin-bottom: 16px;
+			}
+			label {
+				font-size: 12px;
 			}
 		</style>
     </head>
@@ -47,14 +72,14 @@
             <main>
 				<div class="row" style="border: none; box-shadow: none; margin: 0;">
 					<div class="column">
-						<div class="cardText" style="text-align: center;padding: 16px;">
+						<div class="cardText" style="text-align: center;padding: 16px; color: white;">
 							<h3>Let's stay in touch...</h3>
-							<p>Use this form to send me an email. Or, you can check out my professional profiles below.</p>
+							<p style="color: white;">Use this form to send me an email. Or, you can check out my professional profiles below.</p>
 							<br>
-							<a href="https://www.linkedin.com/in/steve-henry-384818146/" class="fa fa-linkedin socialIcon" style="background-color: #007bb5;"></a>
-							<a href="https://github.com/henrysteve45/" class="fa fa-github socialIcon" style="background-color: #032f62;"></a>
+							<a href="https://www.linkedin.com/in/steve-henry-384818146/" class="fa fa-linkedin socialIcon"></a>
+							<a href="https://github.com/henrysteve45/" class="fa fa-github socialIcon"></a>
 							<br><br>
-							<ul style="list-style-type: none; padding-left: 0px;">
+							<ul style="list-style-type: none; padding-left: 0px; color: white;">
 								<li><i class="fa fa-envelope" aria-hidden="true"></i> henry.steve45@gmail.com</li>
 								<li><i class="fa fa-phone" aria-hidden="true"></i> 202-555-5555</li>
 								<li><i class="fa fa-map-marker" aria-hidden="true"></i> Washington, DC</li>
@@ -62,15 +87,17 @@
 						</div>
 					</div>
 					<div class="column">
-						<form style="border: 4px solid black; padding: 16px; box-shadow: 16px 16px 0px #e0e0e0;">
-							<label for="fullname">Full Name</label>
-							<input name="fullname" type="text">
+						<form style="border: 4px solid black; padding: 16px; box-shadow: 16px 16px 0px #5242a8; background-color: white;">
+							<label for="fullname">Full Name</label><br>
+							<input id="fullname" name="fullname" type="text">
 							<br>
-							<label for="email">Email</label>
-							<input name="email" type="text">
-							<label for="phone">Phone</label>
-							<input type="tel" name="phone" placeholder="123-456-6789" pattern="[0-9]{3} [0-9]{3}-[0-9]{4}" required="">
-							<label for="occupation">Occupation</label>
+							<label for="email">Email</label><br>
+							<input id="email" name="email" type="text">
+							<br>
+							<label for="phone">Phone</label><br>
+							<input id="phone" type="tel" name="phone" placeholder="123-456-6789" pattern="[0-9]{3} [0-9]{3}-[0-9]{4}" required="">
+							<br>
+							<label for="occupation">Occupation</label><br>
 							<select id="occupation" name="occupation">
 								<option value="student">Student</option>
 								<option value="educator">Educator</option>
@@ -78,8 +105,8 @@
 								<option value="other">Other</option>
 							</select>
 							<br>
-							<label for="message">Message</label>
-							<textarea id="message" name="message" placeholder="Compose message..." style="height:200px"></textarea>
+							<label for="message">Message</label><br>
+							<textarea id="message" name="message" placeholder="Compose message..." style="height:200px; width: 90%"></textarea>
 							<br>
 							<button style="margin: 16px 0px" class="button" type="button">Submit</button>
 						</form>
